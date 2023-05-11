@@ -1,0 +1,10 @@
+<main>
+  <app-add-post (addUser)="onUserAdded($event)"></app-add-post>
+  <app-post
+    *ngFor="let user of users"
+    [name]="user.name"
+    [status]="user.status"
+    [avatar]="user.avatar"
+    (removeUser)="onUserRemoved(user)"
+  ></app-post>
+</main>
